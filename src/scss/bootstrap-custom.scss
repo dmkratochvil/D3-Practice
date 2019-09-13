@@ -1,0 +1,147 @@
+body {
+    overflow-x: hidden;
+    background-image: url(https://apps.pharmerit.com/dist/landingBG.png); //https://apps.pharmerit.com/qtwist/imgs/landingBG.png
+    background-size: 800px 800px;    
+    opacity: 1;
+    filter: alpha(opacity=0.1);   
+}
+// declare color values
+$primary: #273478;
+$success: #5896D8;
+$info: #C5E1FF;
+$danger: #DA3832;
+$warning: #DA3832;
+$secondary: #f6f6fd;
+$navbar-light-color: rgba(0, 0, 0, 0.65);
+
+.cardShadow {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+// maximize and scale height appropriate for each screen
+.h-max {min-height: calc(100vh - 167px);}
+.h-max2 {min-height: calc(100vh - 258px);}
+
+// landing pattern
+.pattern {
+    background-image: url(https://apps.pharmerit.com/ipad.png);
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    opacity: 0.5;
+    background-position: -350px -300px; 
+}
+
+.centerMap {
+    margin: auto;
+    position: relative;
+    padding: 10px 0;
+  }
+
+// adjust based on media queries
+.col-content {background-color: #fff; border:none;}  
+
+.col-control {
+    background: #f6f6fd; /* Old browsers */
+    background: -moz-linear-gradient(bottom, #f6f6fd 0%, #efeffc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(bottom, #f6f6fd 0%,#efeffc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f6f6fd 0%,#efeffc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6fd', endColorstr='#f6f6fd',GradientType=0 ); /* IE6-9 */
+    background-color: #f6f6fd; 
+}
+
+@media screen and (max-width:769px) {.col-control {background-color: #f6f6fd; border:none;border-bottom-style:solid; border-bottom-color: #c5e1ff; border-bottom-width:1px;height:350px;}}
+@media screen and (min-width:769px) {.col-control {background-color: #f6f6fd; border:none;border-right-style:solid; border-right-color: #c5e1ff; border-right-width:1px;}}
+@media screen and (min-width:992px) {.col-control {background-color: #f6f6fd; border:none;border-right-style:solid; border-right-color: #c5e1ff; border-right-width:1px;}}
+@media screen and (min-width:1200px) {.col-control {background-color: #f6f6fd; border:none;border-right-style:solid; border-right-color: #c5e1ff; border-right-width:1px;}}
+
+@media screen and (min-width:768px) { 
+    .downArrow {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: -2em;
+        left: 40px;
+        box-sizing: border-box;
+        border: 1em solid black;
+        border-color: transparent transparent #273478 #273478;
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    }    
+}
+
+@media screen and (max-width:767px) { 
+    .downArrow {
+        display: none;
+    }
+}
+
+.drop-shadow {
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25); 
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    z-index: 1;
+}
+
+// define footer styles
+footer {
+    font-size: .75rem;
+    background-color: $primary;
+}
+
+footer, footer a, footer a:active, footer a:hover, footer a:visited {
+    color: #fff;
+}
+
+.slide-left1 {
+	-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-right1 {
+	-webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@-webkit-keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(-200px);
+                transform: translateX(-200px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+@keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(-200px);
+                transform: translateX(-200px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes slide-left {
+    0% {
+        -webkit-transform: translateX(200px);
+                transform: translateX(200px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+@keyframes slide-left {
+    0% {
+        -webkit-transform: translateX(200px);
+                transform: translateX(200px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
